@@ -7,3 +7,11 @@ app.get('/', (req, res) => {
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT);
+
+const mongoose = require('mongoose');
+
+mongoose.connect(
+    process.env.MONGODB_URI || "mongodb://localhost/NYTGoogleBookSearch", {
+        useMongoClient: true
+    }
+);
