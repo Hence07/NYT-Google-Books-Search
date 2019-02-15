@@ -3,19 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://hence07.github.io/NYT-Google-Books-Search",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run start\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
-
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "concurrently": "^4.1.0",
     "express": "^4.16.4",
+    "gh-pages": "^2.0.1",
     "mongoose": "^5.4.12",
     "path": "^0.12.7"
   }
