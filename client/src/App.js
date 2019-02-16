@@ -1,28 +1,32 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Search from "./pages/Search.js";
+import Saved from "./pages/Saved.js";
+import "./style.css";
+import API from "./utils/API.js";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+    state = {
+        bookList: [],
+        bookSearch: ""
+    };
+
+    handleInputChange = event => {
+        const {name, value} = event.target;
+        this.setState({
+            [name]: value
+        });
+    };
+
+    
+    render() {
+        return (
+            <Router>
+                
+      
+            </Router>
+        )
+    }
 }
 
 export default App;
