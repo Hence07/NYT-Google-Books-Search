@@ -2,8 +2,10 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/Hence07/NYTGoogleBookSearch",
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-scripts": "2.1.5"
